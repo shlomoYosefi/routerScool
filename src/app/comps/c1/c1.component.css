@@ -1,0 +1,43 @@
+.rishum{
+    width: 100%;
+    height: 50px;
+    background: lightgray;
+    display: flex;
+    text-align: center;  
+}
+
+.hider{
+    width: 100%;
+    height: 50px;
+    background: lightgray;
+    text-align: center;
+}
+
+h1{
+    font-size: xx-large;
+    margin: auto;
+}
+
+button{
+    height: 50px;
+    margin-left: 30px;
+}
+
+#rishum{
+    background: darkcyan;
+    margin: auto;
+    width: 120px;
+}
+
+#user{
+    background: darkkhaki;
+    margin: auto;
+    width: 120px;
+
+}
+
+.menu{
+    width: 100%;
+    height: 70px;
+    background: yellow;
+}

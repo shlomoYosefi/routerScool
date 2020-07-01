@@ -1,0 +1,50 @@
+
+
+.rishum{
+    width: 50%;
+    height: 70%;
+    border: lightsalmon solid 5px;
+    margin: auto;
+    margin-top: 30px;
+    
+}
+
+.row1{
+   text-align: center;
+   margin: auto;
+   display: flex;
+}
+
+.row2{
+    text-align: center;
+    margin: auto;
+    display: flex;
+ }
+
+ .rows{
+     display: flex;
+ }
+
+ h1{
+     text-align: center;
+     text-decoration: underline;
+     margin-top: 30px;
+ }
+
+ .optins{
+     text-align: center;
+ }
+
+ #next{
+     width: 100px;
+     height: 50px;
+     margin: auto;
+     margin-right: 400px;
+     margin-bottom: 15px;
+     background: rosybrown;
+ }
+ 
+ .pictchur{
+     display: flex;
+     margin-right: 310px;
+ }

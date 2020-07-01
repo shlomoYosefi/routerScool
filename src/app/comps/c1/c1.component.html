@@ -1,0 +1,54 @@
+<body dir="rtl">
+
+  <div class="all">
+
+    <div class="hider">
+      <h1><b>ברוכים הבאים לבית הספר</b></h1>
+    </div>
+
+
+
+    <div class="rishum">
+      
+      <button id="rishum" routerLink='/rishum'>הרשמה</button>
+      <button id="user" routerLink='/user'>כניסת תלמיד</button>
+
+    </div>
+
+
+
+
+
+
+<div class="menu">
+
+    <button mat-button [matMenuTriggerFor]="aboveMenu">רשימת התלמידים</button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+      <button routerLink="/class1" mat-menu-item>כיתה א</button>
+      <button routerLink="/class2" mat-menu-item>כיתה ב</button>
+      <button routerLink="/class3" mat-menu-item>כיתה ג</button>
+      <button routerLink="/class4" mat-menu-item>כיתה ד</button>
+      <button routerLink="/class5" mat-menu-item>כיתה ה</button>
+      <button routerLink="/class6" mat-menu-item>כיתה ו</button>
+      <button routerLink="/class7" mat-menu-item>כיתה ז</button>
+      <button routerLink="/class8" mat-menu-item>כיתה ח</button>
+
+    </mat-menu>
+
+    <button mat-button [matMenuTriggerFor]="belowMenu">רשימת חוגים</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button routerLink="/comp3" mat-menu-item>חוג ציור</button>
+      <button routerLink="/comp3" mat-menu-item>חוג ספורט</button>
+      <button routerLink="/comp3" mat-menu-item>חוג קרמיקה</button>
+    </mat-menu>
+
+  </div>
+
+  </div>
+
+
+
+
+<router-outlet></router-outlet>
+
+</body>

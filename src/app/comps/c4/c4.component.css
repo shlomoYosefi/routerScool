@@ -1,0 +1,10 @@
+.example-card {
+    max-width: 200px;
+    margin-right: 40px;
+  }
+
+  .allStu{
+      display: flex;
+      margin-right: 60px;
+      margin-top: 60px;
+  }
