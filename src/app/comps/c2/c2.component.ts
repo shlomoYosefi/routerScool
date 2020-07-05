@@ -1,6 +1,8 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Students } from 'src/app/scool/students';
 import { GetStuService } from 'src/app/servies/get-stu.service';
+import { FormGroup,FormBuilder, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-c2',
@@ -9,13 +11,25 @@ import { GetStuService } from 'src/app/servies/get-stu.service';
 })
 export class C2Component implements OnInit {
 
+  constructor(private srv:GetStuService) { }
 
-  // @Output() sentStudent: EventEmitter<Students> = new EventEmitter<Students>()
+
+  // personFormG = this.formBild.group({
+  //   firstName: ['',Validators.required,Validators.pattern("^[a-zA-Z]+$")],
+  //   lastName: ['',Validators.required,Validators.pattern("^[a-zA-Z]+$")],
+  //   tZ:['',Validators.required,Validators.min(9),Validators.max(9),Validators.pattern("^[0-9]*$")],
+  //   phone:['',Validators.required,Validators.min(9),Validators.max(10),Validators.pattern("^[0-9]*$")],
+  //   password:['',Validators.required,Validators.min(7),Validators.max(15),Validators.pattern("/^(?=\D*\d)(?=[^a-z]*[a-z])(?=[^A-Z]*[A-Z]).{7,15}$/")],
+  //   emil:['']
+   
+  // })
+
+
+  
   student:Students=new Students()
   students:Students[]=[]
 
-  constructor(private srv:GetStuService) { }
-
+  
   ngOnInit(): void {
   }
 
@@ -34,7 +48,7 @@ export class C2Component implements OnInit {
     this.student = new Students()
     console.log(this.srv.arrayStudents);
     
-    // this.sentStudent.emit(this.student)
+    
 
   }
 

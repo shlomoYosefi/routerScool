@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-c3',
@@ -9,15 +11,17 @@ export class C3Component implements OnInit {
 
 
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
+
+  personGrup = this.fb.group({
+    emil:   ['', Validators.required],
+    password:    ['', Validators.required]
+  })
 
   ngOnInit(): void {
 
   }
-  myName(x){
-    console.log(x);
-    
-  }
+  
 
 
 }
