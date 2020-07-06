@@ -11,12 +11,11 @@ export class C3Component implements OnInit {
 
 
 
-  constructor(private fb: FormBuilder) { }
+  constructor() { }
 
-  personGrup = this.fb.group({
-    emil:   ['', Validators.required],
-    password:    ['', Validators.required]
-  })
+
+
+  
 
   ngOnInit(): void {
 

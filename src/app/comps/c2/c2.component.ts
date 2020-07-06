@@ -13,6 +13,8 @@ export class C2Component implements OnInit {
 
   constructor(private srv:GetStuService) { }
 
+  name = new FormControl('', [Validators.required,Validators.pattern("^[a-zA-Z]+$")])
+
 
   // personFormG = this.formBild.group({
   //   firstName: ['',Validators.required,Validators.pattern("^[a-zA-Z]+$")],
@@ -58,6 +60,11 @@ export class C2Component implements OnInit {
 
   date(x){
     this.student.datePicker=`${x.value.getDate()}/${x.value.getMonth()+1}/${x.value.getFullYear()}`;
+  }
+
+  logim(){
+    console.log(this.name);
+    
   }
 
   

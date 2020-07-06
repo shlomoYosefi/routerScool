@@ -11,15 +11,17 @@ export class C4Component implements OnInit {
 
 
   
+  array=[1,2,3,4,5,6,7,8,9,10]
 
-
-  constructor() {
+  constructor(public data:GetStuService) {
     
 
    }
 
   ngOnInit(): void {
-    
+    setTimeout(()=>{
+      console.log(this.data.arryZer);
+    },4000)
   }
 
 }

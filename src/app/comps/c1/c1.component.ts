@@ -12,4 +12,9 @@ export class C1Component implements OnInit {
   ngOnInit(): void {
   }
 
+  cl(){
+    console.log("lllllll");
+    
+  }
+
 }

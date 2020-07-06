@@ -11,6 +11,7 @@ import { C3Component } from './comps/c3/c3.component';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { C4Component } from './comps/c4/c4.component';
 import { C5Component } from './comps/c5/c5.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,15 @@ import { C5Component } from './comps/c5/c5.component';
     C2Component,
     C3Component,
     C4Component,
-    C5Component
+    C5Component,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    HttpClientModule
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'he-IL'},

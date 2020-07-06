@@ -1,3 +1,7 @@
+/* body{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS2aBf3ofVaLfkFdjMn_wz2Zo8pOpPNVO9wlg&usqp=CAU');
+} */
+
 .rishum{
     width: 100%;
     height: 50px;
@@ -10,7 +14,8 @@
     width: 100%;
     height: 50px;
     background: lightgray;
-    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 h1{
@@ -33,15 +38,38 @@ button{
     background: darkkhaki;
     /* margin: auto; */
     width: 120px;
-
 }
 
 .menu{
     width: 100%;
     height: 70px;
     background: yellow;
+    display: flex;
 }
 
 #search{
     padding-top: 10px;
+}
+
+.cls1{
+    width: 10%;
+}
+.cls2{
+    width: 10%;
+}
+.cls3{
+    width: 10%;
+}
+.cls4{
+    width: 10%;
+}
+.cls5{
+    width: 10%;
+}
+.cls6{
+    width: 10%;
+}
+
+.shop{
+    margin-right: 45%;
 }

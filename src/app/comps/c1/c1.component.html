@@ -3,18 +3,28 @@
   <div class="all">
 
     <div class="hider">
-      <h1><b>ברוכים הבאים לבית הספר</b></h1>
+      <h1><b>פרחים כל מה שבית צריך</b></h1>
     </div>
 
 
 
     <div class="rishum">
-      
+
       <button id="rishum" routerLink='/rishum'>הרשמה</button>
-      <button id="user" routerLink='/user'>כניסת משתמש</button>
-      
-      <input  id="serch" placeholder="חיפוש חופשי">
-      <button><mat-icon  id="search">search</mat-icon></button>
+      <button id="user" routerLink='/user' (click)='cl()'>כניסת משתמש</button>
+
+      <input id="serch" placeholder="חיפוש חופשי">
+      <button>
+        <mat-icon id="search">search</mat-icon>
+      </button>
+
+      <div class="shop">
+        
+        <button >עגלת הקניות
+          <mat-icon id="search">shopping_cart</mat-icon>
+        </button>
+
+      </div>
 
       <!-- <mat-form-field>
         <input matInput type="text" placeholder="Search">
@@ -22,7 +32,7 @@
           <mat-icon>search</mat-icon>
         </button>
       </mat-form-field> -->
-      
+
 
     </div>
 
@@ -31,35 +41,75 @@
 
 
 
-<div class="menu">
+    <div class="menu">
 
-    <button mat-button [matMenuTriggerFor]="aboveMenu">רשימת התלמידים</button>
-    <mat-menu #aboveMenu="matMenu" yPosition="above">
-      <button routerLink="/class1" mat-menu-item>כיתה א</button>
-      <button routerLink="/class2" mat-menu-item>כיתה ב</button>
-      <button routerLink="/class3" mat-menu-item>כיתה ג</button>
-      <button routerLink="/class4" mat-menu-item>כיתה ד</button>
-      <button routerLink="/class5" mat-menu-item>כיתה ה</button>
-      <button routerLink="/class6" mat-menu-item>כיתה ו</button>
-      <button routerLink="/class7" mat-menu-item>כיתה ז</button>
-      <button routerLink="/class8" mat-menu-item>כיתה ח</button>
+      <div class="cls1">
 
-    </mat-menu>
+      <button mat-button [matMenuTriggerFor]="aboveMenu">זרי פרחים</button>
+      <mat-menu #aboveMenu="matMenu" yPosition="above">
+        <button routerLink="/class1" mat-menu-item> זרים קלאסיים</button>
+        <button routerLink="/class2" mat-menu-item> זרים לבנים</button>
+        <button routerLink="/class3" mat-menu-item> זרי ורדים</button>
+        <button routerLink="/class4" mat-menu-item>זרים חגיגיים </button>
+     </mat-menu>
+    </div>
+    <div class="cls2">
 
-    <button mat-button [matMenuTriggerFor]="belowMenu">רשימת חוגים</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-      <button routerLink="/comp3" mat-menu-item>חוג ציור</button>
-      <button routerLink="/comp3" mat-menu-item>חוג ספורט</button>
-      <button routerLink="/comp3" mat-menu-item>חוג קרמיקה</button>
-    </mat-menu>
+      <button mat-button [matMenuTriggerFor]="belowMenu">זרי כלה </button>
+      <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button routerLink="/comp3" mat-menu-item>אהבה לבנה </button>
+        <button routerLink="/comp3" mat-menu-item>אהבה ורודה </button>
+        <button routerLink="/comp3" mat-menu-item>ירוק בעיניים</button>
 
+      </mat-menu>
+
+    </div>
+    <div class="cls3">
+
+      <button mat-button [matMenuTriggerFor]="belowMenu">עציצים </button>
+      <mat-menu #aaaaaa="matMenu" yPosition="below">
+        <button routerLink="/comp3" mat-menu-item>לבית ולמשרד </button>
+        <button routerLink="/comp3" mat-menu-item>עציצים פורחים </button>
+        <button routerLink="/comp3" mat-menu-item>סחלבים </button>
+      </mat-menu>
+      </div>
+
+      <div class="cls4">
+
+        <button mat-button [matMenuTriggerFor]="belowMenu">מתנות ליולדות </button>
+        <mat-menu #aaaaaa="matMenu" yPosition="below">
+          <button routerLink="/comp3" mat-menu-item>לבית ולמשרד </button>
+          <button routerLink="/comp3" mat-menu-item>עציצים פורחים </button>
+          <button routerLink="/comp3" mat-menu-item>סחלבים </button>
+        </mat-menu>
+        </div>
+
+        <div class="cls5">
+
+          <button mat-button [matMenuTriggerFor]="belowMenu">חבילת חתנים </button>
+          <mat-menu #aaaaaa="matMenu" yPosition="below">
+            <button routerLink="/comp3" mat-menu-item>לבית ולמשרד </button>
+            <button routerLink="/comp3" mat-menu-item>עציצים פורחים </button>
+            <button routerLink="/comp3" mat-menu-item>סחלבים </button>
+          </mat-menu>
+          </div>
+
+          <div class="cls6">
+
+            <button mat-button [matMenuTriggerFor]="belowMenu">שוקלדים </button>
+            <mat-menu #aaaaaa="matMenu" yPosition="below">
+              <button routerLink="/comp3" mat-menu-item>לבית ולמשרד </button>
+              <button routerLink="/comp3" mat-menu-item>עציצים פורחים </button>
+              <button routerLink="/comp3" mat-menu-item>סחלבים </button>
+            </mat-menu>
+            </div>
+    </div>
   </div>
 
-  </div>
 
 
 
 
-<router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 
 </body>
