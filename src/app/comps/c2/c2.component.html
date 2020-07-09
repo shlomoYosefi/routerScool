@@ -1,80 +1,83 @@
 <body dir="rtl">
+   
 
     <div class="rishum  mat-elevation-z6">
 
         <h1>רישום</h1><br><br><br>
 
+        <form [formGroup]="personFormG">
 
-        <div class="optins">
-            <mat-radio-group aria-label="Select an option">
-                <mat-radio-button (change)='radio($event)' value="בן" 
-                >זכר</mat-radio-button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <mat-radio-button (change)='radio($event)' value="בת"
-                >נקבה</mat-radio-button>
-            </mat-radio-group><br><br><br><br>
-        </div>
-        <div class="rows">
+            <div class="optins">
+                <mat-radio-group aria-label="Select an option">
+                    <mat-radio-button (change)='radio($event)' value="בן">זכר</mat-radio-button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <mat-radio-button (change)='radio($event)' value="בת">נקבה</mat-radio-button>
+                </mat-radio-group><br><br><br><br>
+            </div>
+            <div class="rows">
 
-            <div class="row1">
+                <div class="row1">
 
-                <div class="us1">
-                    <label >שם פרטי :</label><br><br><br><br>
-                    <label>שם משפחה :</label><br><br><br><br>
-                    <label>ת.ז.</label><br><br><br><br>
+                    <div class="us1">
+                        <label>שם פרטי :</label><br><br><br><br>
+                        <label>שם משפחה :</label><br><br><br><br>
+                        <label>ת.ז.</label><br><br><br><br>
+                    </div>
+
+                    <div class="us2">
+                        <input #firstName formControlName="firstName"><br>
+                        <span id="spanFirstName" ></span><br><br><br>
+                        
+                        <input #lastName formControlName="lastName"><br>
+                        <span id='spanlastName'></span><br><br><br>
+                        
+                        <input #tZ formControlName="tZ"><br>
+                        <span id='spanTz'></span><br><br><br>
+                    </div>
+
                 </div>
 
-                <div class="us2">
-                    <input #firstname  ><br><br><br><br>
-                    <input #lastName><br><br><br><br>
-                    <input #tZ><br><br><br><br>
+                <div class="row2">
+                    <div class="us3">
+                        <label>טלפון :</label><br><br><br><br>
+                        <label>סיסמא :</label><br><br><br><br>
+                        <label>אמייל:</label><br><br><br><br>
+                    </div>
+
+                    <div class="us4">
+                        <input #phone formControlName="phone" ><br>
+                        <span id='spanPhone'></span><br><br><br>
+
+                        <input #password type="password" formControlName="password"><br>
+                        <span id='spanPassword'></span><br><br><br>
+
+                        <input #email type="email" formControlName="email"><br>
+                        <span id='spanEmail'></span><br><br><br>
+                    </div>
+
+
+
                 </div>
+
 
             </div>
+            <div class="birthday" style="display: flex;">
 
-            <div class="row2">
-                <div class="us3">
-                    <label>טלפון :</label><br><br><br><br>
-                    <label>סיסמא :</label><br><br><br><br>
-                    <label>תאריך לידה :</label><br><br><br><br>
-                </div>
-
-                <div class="us4">
-                    <input #phone><br><br><br><br>
-                    <input #password type="password"><br><br><br>
-                    <mat-form-field appearance="fill">
-                        <mat-label>בחר תאריך</mat-label>
-                        <input  matInput  [matDatepicker]="picker" (dateInput)='date($event)'>
-                        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-                        <mat-datepicker #picker></mat-datepicker>
-                    </mat-form-field><br><br><br><br>
-                </div>
-
+                <mat-form-field appearance="fill">
+                    <mat-label>תאריך לידה</mat-label>
+                    <input matInput [matDatepicker]="picker" (dateInput)='date($event)'>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker>
+                </mat-form-field><br><br><br><br>
             </div>
-        </div>
-        <div class="pictchur">
-            <label>הוסף תמונה :</label>
-            <input #pictchur>
-        </div><br><br><br>
+        </form>
 
 
-        <button id="next" (click)='sentStu(firstname,lastName,tZ,phone,password,pictchur)' routerLink='""'>רישום</button>
+
+        <button id="next" (click)='sentStu(firstName,lastName,tZ,phone,password)' (click)='logim()' 
+          [routerLink] = "perfect()">רישום</button>
     </div>
 
-
-
-<!-- <form [formGroup]="personFormG" >
-  
-    <label> שם פרטי : <input formControlName="firstName"></label><br>
-    <label> שם משפחה : <input  formControlName="lastName"> </label><br>
-    <label> ת.ז : <input  formControlName="tZ"> </label><br>
-    <label> טלפון : <input  formControlName="phone"> </label><br>
-    <label> סיסמא : <input  formControlName="password"> </label><br>
-    <label> מייל : <input  formControlName="emil"> </label><br>
-
-    <br><br> -->
-  
-    <!-- <button type="submit" [disabled]="!newRegForm.valid">Submit</button> -->
-<!-- </form> -->
 
 
 </body>

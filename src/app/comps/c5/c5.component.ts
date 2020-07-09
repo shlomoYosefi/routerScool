@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GetStuService } from 'src/app/servies/get-stu.service';
 
 @Component({
@@ -8,9 +8,13 @@ import { GetStuService } from 'src/app/servies/get-stu.service';
 })
 export class C5Component implements OnInit {
 
+
+   myImg
+
   constructor(public srv:GetStuService) { }
 
   ngOnInit(): void {
+    this.myImg = this.srv.imgServ
   }
 
 }

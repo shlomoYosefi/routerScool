@@ -7,9 +7,8 @@ import { GetHttpService } from './get-http.service';
 })
 export class GetStuService  {
 
-
+  imgServ
   arryZer =[]
-  arrayStudents:Students[][]=[]
   
   
   constructor(public srv:GetHttpService) {

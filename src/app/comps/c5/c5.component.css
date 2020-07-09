@@ -1,0 +1,28 @@
+.all{
+
+    display: flex;
+   
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+    height: 60%;
+    width: 60%;
+    border: salmon solid 5px;
+    background-color: sandybrown;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+.aa{
+    background: red;
+    
+}
+
+
+
+
+

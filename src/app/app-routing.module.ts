@@ -5,6 +5,7 @@ import { C2Component } from './comps/c2/c2.component';
 import { C3Component } from './comps/c3/c3.component';
 import { C4Component } from './comps/c4/c4.component';
 import { C5Component } from './comps/c5/c5.component';
+import { ZerLavanComponent } from './comps/zer-lavan/zer-lavan.component';
 
 
 const routes: Routes = [
@@ -12,8 +13,9 @@ const routes: Routes = [
     children:[
       {path:"rishum" , component:C2Component},
       {path:"user" , component:C3Component},
+      {path:"zerLavan" , component:ZerLavanComponent},
       {path:"class1" , component:C4Component},
-      {path:"class2" , component:C5Component}
+      {path:"img" , component:C5Component}
     ]
 },
   {path:"**" , component:C1Component}

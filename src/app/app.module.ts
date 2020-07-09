@@ -12,6 +12,7 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { C4Component } from './comps/c4/c4.component';
 import { C5Component } from './comps/c5/c5.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     DemoMaterialModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserModule,
+    ReactiveFormsModule,
   ],
   providers: [
     {provide: MAT_DATE_LOCALE, useValue: 'he-IL'},
